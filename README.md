@@ -9,7 +9,7 @@ HuggingFace: [All artifacts](https://huggingface.co/collections/aisingapore/wang
 ## Dataset
 We collect datasets from various sources that can be classified into two categories: (i) Common Crawl-Derived Dataset and (ii) Curated Non-Common Crawl. We have a total of 30.1M documents and 47.4B tokens, as shown in Table
 
-| Source                     | Documents | Tokens (B) |
+| Source                     | # of Documents | Tokens (B) |
 |----------------------------|-----------|------------|
 | Common Crawl-Derived       | 29.7M     | 45.9       |
 | Curated Non-Common Crawl   | 425,304   | 1.5        |
