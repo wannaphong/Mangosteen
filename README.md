@@ -18,7 +18,7 @@ We collect datasets from various sources that can be classified into two categor
 
 ### Common Crawl-Derived Dataset
 
-We merged  two sources, both Common Crawl and FineWeb2 (derived from the Common Crawl dataset) Thai subsets, through our pipeline.
+We merged  two sources, both Thai Common Crawl and FineWeb2 (derived from the Common Crawl dataset) subsets, through our pipeline.
 
 Read more [arXiv [wait]]
 
