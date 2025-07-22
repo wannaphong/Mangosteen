@@ -20,7 +20,7 @@ We collect datasets from various sources that can be classified into two categor
 
 We merged  two sources, both Thai Common Crawl and FineWeb2 (derived from the Common Crawl dataset) subsets, through our pipeline.
 
-Read more [arXiv [wait]]
+Read more [Mangosteen: An Open Thai Corpus for Language Model Pretraining](https://arxiv.org/abs/2507.14664)
 
 ### Curated Non-Common Crawl Dataset
 
