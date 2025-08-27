@@ -1,0 +1,9 @@
+{
+    "documents": [
+      "data/documents/*.jsonl"
+    ],
+    "taggers": [
+      "thai_char_ratio_doc_v1"
+    ],
+    "processes": 1
+}

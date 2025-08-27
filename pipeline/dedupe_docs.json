@@ -1,0 +1,20 @@
+{
+    "documents": [
+      "data/documents/*.jsonl"
+    ],
+    "dedupe": {
+      "name": "dedupe_docs",
+      "documents": {
+        "attribute_name": "bff_duplicate_docs",
+        "key": "$.text"
+      },
+      "skip_empty": true
+    },
+    "bloom_filter": {
+      "file": "dedupe_docs_bloom_filter.bin",
+      "read_only": false,
+      "estimated_doc_count": 100,
+      "desired_false_positive_rate": 1e-06
+    },
+    "processes": 1
+}

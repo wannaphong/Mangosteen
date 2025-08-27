@@ -1,0 +1,19 @@
+{
+    "documents": [
+      "data/documents/*.jsonl"
+    ],
+    "dedupe": {
+      "name": "dedupe_by_url",
+      "documents": {
+        "attribute_name": "bff_duplicate_url",
+        "key": "$.metadata.url"
+      }
+    },
+    "bloom_filter": {
+      "file": "url_bloom_filter.bin",
+      "read_only": false,
+      "estimated_doc_count": 100,
+      "desired_false_positive_rate": 1e-06
+    },
+    "processes": 80
+}

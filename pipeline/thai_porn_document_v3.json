@@ -1,0 +1,9 @@
+{
+    "documents": [
+      "data/documents/*.jsonl"
+    ],
+    "taggers": [
+      "thai_porn_document_v3"
+    ],
+    "processes": 1
+}

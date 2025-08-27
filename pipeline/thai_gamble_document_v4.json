@@ -1,0 +1,9 @@
+{
+    "documents": [
+      "data/documents/*.jsonl"
+    ],
+    "taggers": [
+      "thai_gamble_document_v4"
+    ],
+    "processes": 1
+}

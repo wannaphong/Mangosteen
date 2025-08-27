@@ -1,0 +1,9 @@
+{
+    "documents": [
+      "data/documents/*.jsonl"
+    ],
+    "taggers": [
+      "th_c4_v3"
+    ],
+    "processes": 1
+}

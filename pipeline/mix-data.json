@@ -1,0 +1,90 @@
+{
+    "streams": [
+      {
+        "name": "webv1",
+        "documents": [
+          "data/documents/*.jsonl"
+        ],
+        "output": {
+          "path": "mix-data/documents/",
+          "max_size_in_bytes": 20000000000,
+          "min_text_length": 1,
+          "discard_fields": []
+        },
+        "attributes": [
+          "thai_char_ratio_doc_v1",
+          "dedupe_by_url",
+          "dedupe_docs",
+          "thai_porn_document_v3",
+          "thai_gamble_document_v4",
+          "th_pii_regex_with_counts_fast_v2",
+          "th_c4_v3",
+          "th_gopher_v3"
+        ],
+        "filter": {
+          "exclude": [
+            "$.attributes[?(@.thai_char_ratio_doc_v1__thai_char_ratio_doc_v1__th && @.thai_char_ratio_doc_v1__thai_char_ratio_doc_v1__th[0] && @.thai_char_ratio_doc_v1__thai_char_ratio_doc_v1__th[0][2] < 50)]",
+            "$.attributes[?(@.bff_duplicate_docs && @.bff_duplicate_docs[0] && @.bff_duplicate_docs[0][2] >= 1)]",
+            "$.attributes[?(@.bff_duplicate_url && @.bff_duplicate_url[0] && @.bff_duplicate_url[0][2] >= 1)]",
+            "$.attributes[?(@.th_c4_v3__th_c4_v3__has_naughty_word && @.th_c4_v3__th_c4_v3__has_naughty_word[0] && @.th_c4_v3__th_c4_v3__has_naughty_word[0][2] > 0.5)]",
+            "$.attributes[?(@.th_c4_v3__th_c4_v3__has_curly_brace && @.th_c4_v3__th_c4_v3__has_curly_brace[0] && @.th_c4_v3__th_c4_v3__has_curly_brace[0][2] > 0.5)]",
+            "$.attributes[?(@.th_c4_v3__th_c4_v3__has_lorem_ipsum && @.th_c4_v3__th_c4_v3__has_lorem_ipsum[0] && @.th_c4_v3__th_c4_v3__has_lorem_ipsum[0][2] > 0.5)]",
+            "$.attributes[?(@.th_c4_v3__th_c4_v3__has_javascript && @.th_c4_v3__th_c4_v3__has_javascript[0] && @.th_c4_v3__th_c4_v3__has_javascript[0][2] > 0.5)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_most_common_2grams && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_most_common_2grams[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_most_common_2grams[0][2] > 0.20)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_most_common_3grams && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_most_common_3grams[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_most_common_3grams[0][2] > 0.18)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_most_common_4grams && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_most_common_4grams[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_most_common_4grams[0][2] > 0.16)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_5grams && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_5grams[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_5grams[0][2] > 0.15)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_6grams && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_6grams[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_6grams[0][2] > 0.14)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_7grams && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_7grams[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_7grams[0][2] > 0.13)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_8grams && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_8grams[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_8grams[0][2] > 0.12)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_9grams && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_9grams[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_9grams[0][2] > 0.11)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_10grams && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_10grams[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_10grams[0][2] > 0.10)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__word_count && @.th_gopher_v3__th_gopher_v3__word_count[0] && @.th_gopher_v3__th_gopher_v3__word_count[0][2] < 200)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__word_count && @.th_gopher_v3__th_gopher_v3__word_count[0] && @.th_gopher_v3__th_gopher_v3__word_count[0][2] > 100000)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__median_word_length && @.th_gopher_v3__th_gopher_v3__median_word_length[0] && @.th_gopher_v3__th_gopher_v3__median_word_length[0][2] < 3)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__median_word_length && @.th_gopher_v3__th_gopher_v3__median_word_length[0] && @.th_gopher_v3__th_gopher_v3__median_word_length[0][2] > 10)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__symbol_to_word_ratio && @.th_gopher_v3__th_gopher_v3__symbol_to_word_ratio[0] && @.th_gopher_v3__th_gopher_v3__symbol_to_word_ratio[0][2] > 0.1)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_words_with_thai_letters && @.th_gopher_v3__th_gopher_v3__fraction_of_words_with_thai_letters[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_words_with_thai_letters[0][2] < 0.80)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__required_word_count && @.th_gopher_v3__th_gopher_v3__required_word_count[0] && @.th_gopher_v3__th_gopher_v3__required_word_count[0][2] < 2)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_lines_starting_with_bullet_point && @.th_gopher_v3__th_gopher_v3__fraction_of_lines_starting_with_bullet_point[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_lines_starting_with_bullet_point[0][2] > 0.90)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_lines_ending_with_ellipsis && @.th_gopher_v3__th_gopher_v3__fraction_of_lines_ending_with_ellipsis[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_lines_ending_with_ellipsis[0][2] > 0.30)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__read_more_token_count && @.th_gopher_v3__th_gopher_v3__read_more_token_count[0] && @.th_gopher_v3__th_gopher_v3__read_more_token_count[0][2] >= 1)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_duplicate_lines && @.th_gopher_v3__th_gopher_v3__fraction_of_duplicate_lines[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_duplicate_lines[0][2] > 0.30)]",
+            "$.attributes[?(@.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_lines && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_lines[0] && @.th_gopher_v3__th_gopher_v3__fraction_of_characters_in_duplicate_lines[0][2] > 0.30)]",
+            "$.attributes[?(@.thai_porn_document_v3__thai_porn_document_v3____label__porn && @.thai_porn_document_v3__thai_porn_document_v3____label__porn[0] && @.thai_porn_document_v3__thai_porn_document_v3____label__porn[0][2] > 0.5)]",
+            "$.attributes[?(@.thai_gamble_document_v4__thai_gamble_document_v4____label__gamble && @.thai_gamble_document_v4__thai_gamble_document_v4____label__gamble[0] && @.thai_gamble_document_v4__thai_gamble_document_v4____label__gamble[0][2] > 0.5)]",
+            "$.attributes[?(@.th_pii_regex_with_counts_fast_v2__th_pii_regex_with_counts_fast_v2__doc_count && @.th_pii_regex_with_counts_fast_v2__th_pii_regex_with_counts_fast_v2__doc_count[0] && @.th_pii_regex_with_counts_fast_v2__th_pii_regex_with_counts_fast_v2__doc_count[0][2] > 5)]"
+          ]
+        },
+        "span_replacement": [
+            {
+                "span": "$.attributes.th_c4_v3__th_c4_v3__lines_with_too_few_words",
+                "min_score": 0.5,
+                "replacement": ""
+            },
+            {
+                "span": "$.attributes.th_c4_v3__th_c4_v3__corrupt_unicode",
+                "min_score": 0.0,
+                "replacement": ""
+            },
+            {
+                "span": "$.attributes.th_pii_regex_with_counts_fast_v2__th_pii_regex_with_counts_fast_v2__EMAIL_ADDRESS",
+                "min_score": 0.5,
+                "replacement": " |||EMAIL_ADDRESS||| "
+            },
+            {
+                "span": "$.attributes.th_pii_regex_with_counts_fast_v2__th_pii_regex_with_counts_fast_v2__PHONE_NUMBER",
+                "min_score": 0.5,
+                "replacement": " |||PHONE_NUMBER||| "
+            },
+            {
+                "span": "$.attributes.th_pii_regex_with_counts_fast_v2__th_pii_regex_with_counts_fast_v2__IP_ADDRESS",
+                "min_score": 0.5,
+                "replacement": " |||IP_ADDRESS||| "
+            }
+        ]
+      }
+    ],
+    "processes": 1
+  }
+

@@ -1,0 +1,7 @@
+{
+    "documents": [
+      "data/documents/*.jsonl"
+    ],
+    "taggers": ["th_pii_regex_with_counts_fast_v2"],
+    "processes": 1
+}
