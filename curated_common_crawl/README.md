@@ -24,4 +24,4 @@ See more: [https://github.com/allenai/dolma/blob/main/docs/data-format.md](https
 
 And save file to `name_dataset/documents/` like `data/documents/fw2.jsonl`.
 
-Finally, run run_all.sh file. You will give file in `mix-data/documents/`.
+Finally, run `bash run_all.sh` file. You will give file in `mix-data/documents/`.
