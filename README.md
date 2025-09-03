@@ -6,6 +6,19 @@ We introduce Mangosteen: a 47 billion‑token Thai corpus built through a Thai-a
 
 HuggingFace: [All artifacts](https://huggingface.co/collections/aisingapore/wangchanlion-v3-687a362d8f0ea2fe4077c6b3)
 
+## Citation
+```
+@misc{phatthiyaphaibun2025mangosteenopenthaicorpus,
+      title={Mangosteen: An Open Thai Corpus for Language Model Pretraining}, 
+      author={Wannaphong Phatthiyaphaibun and Can Udomcharoenchaikit and Pakpoom Singkorapoom and Kunat Pipatanakul and Ekapol Chuangsuwanich and Peerat Limkonchotiwat and Sarana Nutanong},
+      year={2025},
+      eprint={2507.14664},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2507.14664}, 
+}
+```
+
 ## Dataset
 We collect datasets from various sources that can be classified into two categories: (i) Common Crawl-Derived Dataset and (ii) Curated Non-Common Crawl. We have a total of 30.1M documents and 47.4B tokens, as shown in Table
 
